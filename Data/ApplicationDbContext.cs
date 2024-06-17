@@ -18,4 +18,7 @@ using NTD_Baithi2324.Models;
     
         public DbSet<NTD_Baithi2324.Models.NTD195Person> NTD195Person { get; set; } = default!;
 
+    
+        public DbSet<NTD_Baithi2324.Models.NTD195Employee> NTD195Employee { get; set; } = default!;
+
     }

@@ -1,0 +1,41 @@
+@model IEnumerable<NTD_Baithi2324.Models.NTD195Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NTD195FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NTD195Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NTD195FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NTD195Address)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NTD195EmployeeID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NTD195EmployeeID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NTD195EmployeeID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
