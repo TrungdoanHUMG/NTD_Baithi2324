@@ -21,27 +21,27 @@ namespace NTD_Baithi2324.Controllers
         // GET: Person
         public async Task<IActionResult> Index()
         {
-              return _context.Person != null ? 
-                          View(await _context.Person.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Person'  is null.");
+              return _context.NTD195Person != null ? 
+                          View(await _context.NTD195Person.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.NTD195Person'  is null.");
         }
 
         // GET: Person/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.Person == null)
+            if (id == null || _context.NTD195Person == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var nTD195Person = await _context.NTD195Person
                 .FirstOrDefaultAsync(m => m.NTD195PersonID == id);
-            if (person == null)
+            if (nTD195Person == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(nTD195Person);
         }
 
         // GET: Person/Create
@@ -55,31 +55,31 @@ namespace NTD_Baithi2324.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("NTD195PersonID,NTD195FullName,NTD195Diachi")] Person person)
+        public async Task<IActionResult> Create([Bind("NTD195PersonID,NTD195FullName,NTD195Diachi")] NTD195Person nTD195Person)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(person);
+                _context.Add(nTD195Person);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(person);
+            return View(nTD195Person);
         }
 
         // GET: Person/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Person == null)
+            if (id == null || _context.NTD195Person == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
-            if (person == null)
+            var nTD195Person = await _context.NTD195Person.FindAsync(id);
+            if (nTD195Person == null)
             {
                 return NotFound();
             }
-            return View(person);
+            return View(nTD195Person);
         }
 
         // POST: Person/Edit/5
@@ -87,9 +87,9 @@ namespace NTD_Baithi2324.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("NTD195PersonID,NTD195FullName,NTD195Diachi")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("NTD195PersonID,NTD195FullName,NTD195Diachi")] NTD195Person nTD195Person)
         {
-            if (id != person.NTD195PersonID)
+            if (id != nTD195Person.NTD195PersonID)
             {
                 return NotFound();
             }
@@ -98,12 +98,12 @@ namespace NTD_Baithi2324.Controllers
             {
                 try
                 {
-                    _context.Update(person);
+                    _context.Update(nTD195Person);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.NTD195PersonID))
+                    if (!NTD195PersonExists(nTD195Person.NTD195PersonID))
                     {
                         return NotFound();
                     }
@@ -114,25 +114,25 @@ namespace NTD_Baithi2324.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(person);
+            return View(nTD195Person);
         }
 
         // GET: Person/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.Person == null)
+            if (id == null || _context.NTD195Person == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var nTD195Person = await _context.NTD195Person
                 .FirstOrDefaultAsync(m => m.NTD195PersonID == id);
-            if (person == null)
+            if (nTD195Person == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(nTD195Person);
         }
 
         // POST: Person/Delete/5
@@ -140,23 +140,23 @@ namespace NTD_Baithi2324.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Person == null)
+            if (_context.NTD195Person == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Person'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.NTD195Person'  is null.");
             }
-            var person = await _context.Person.FindAsync(id);
-            if (person != null)
+            var nTD195Person = await _context.NTD195Person.FindAsync(id);
+            if (nTD195Person != null)
             {
-                _context.Person.Remove(person);
+                _context.NTD195Person.Remove(nTD195Person);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(string id)
+        private bool NTD195PersonExists(string id)
         {
-          return (_context.Person?.Any(e => e.NTD195PersonID == id)).GetValueOrDefault();
+          return (_context.NTD195Person?.Any(e => e.NTD195PersonID == id)).GetValueOrDefault();
         }
     }
 }

@@ -7,8 +7,8 @@ namespace NTD_Baithi2324.Models
     public class Empoyee
     {
         [Key]
-        public string EmpoyeeID { get; set; }
-        public string FullName { get; set; }
-        public string Address { get; set; }
+        public string NTD195EmpoyeeID { get; set; }
+        public string NTD195FullName { get; set; }
+        public string NTD195Address { get; set; }
     }
 }

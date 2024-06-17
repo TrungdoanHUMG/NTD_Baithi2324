@@ -12,7 +12,10 @@ using NTD_Baithi2324.Models;
         {
         }
 
-        public DbSet<NTD_Baithi2324.Models.Person> Person { get; set; } = default!;
+    
+        public DbSet<NTD_Baithi2324.Models.NTD195Student> NTD195Student { get; set; } = default!;
 
-        public DbSet<NTD_Baithi2324.Models.Student> Student { get; set; } = default!;
+    
+        public DbSet<NTD_Baithi2324.Models.NTD195Person> NTD195Person { get; set; } = default!;
+
     }

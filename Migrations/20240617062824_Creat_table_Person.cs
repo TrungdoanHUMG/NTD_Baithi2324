@@ -27,13 +27,13 @@ namespace NTDBaithi2324.Migrations
                 name: "Student",
                 columns: table => new
                 {
-                    StudentID = table.Column<string>(type: "TEXT", nullable: false),
-                    FullName = table.Column<string>(type: "TEXT", nullable: false),
-                    MaLOP = table.Column<string>(type: "TEXT", nullable: false)
+                    NTD195StudentID = table.Column<string>(type: "TEXT", nullable: false),
+                    NTD195FullName = table.Column<string>(type: "TEXT", nullable: false),
+                    NTD195MaLOP = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Student", x => x.StudentID);
+                    table.PrimaryKey("PK_Student", x => x.NTD195StudentID);
                 });
         }
 

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace NTDBaithi2324.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240617061855_Creat_table_Person")]
+    [Migration("20240617062824_Creat_table_Person")]
     partial class CreattablePerson
     {
         /// <inheritdoc />
@@ -18,7 +18,7 @@ namespace NTDBaithi2324.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
 
-            modelBuilder.Entity("NTD_Baithi2324.Models.Person", b =>
+            modelBuilder.Entity("NTD_Baithi2324.Models.NTD195Person", b =>
                 {
                     b.Property<string>("NTD195PersonID")
                         .HasColumnType("TEXT");
@@ -36,20 +36,20 @@ namespace NTDBaithi2324.Migrations
                     b.ToTable("Person");
                 });
 
-            modelBuilder.Entity("NTD_Baithi2324.Models.Student", b =>
+            modelBuilder.Entity("NTD_Baithi2324.Models.NTD195Student", b =>
                 {
-                    b.Property<string>("StudentID")
+                    b.Property<string>("NTD195StudentID")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("NTD195FullName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("MaLOP")
+                    b.Property<string>("NTD195MaLOP")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("StudentID");
+                    b.HasKey("NTD195StudentID");
 
                     b.ToTable("Student");
                 });

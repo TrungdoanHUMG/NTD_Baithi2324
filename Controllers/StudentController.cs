@@ -21,27 +21,27 @@ namespace NTD_Baithi2324.Controllers
         // GET: Student
         public async Task<IActionResult> Index()
         {
-              return _context.Student != null ? 
-                          View(await _context.Student.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Student'  is null.");
+              return _context.NTD195Student != null ? 
+                          View(await _context.NTD195Student.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.NTD195Student'  is null.");
         }
 
         // GET: Student/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.Student == null)
+            if (id == null || _context.NTD195Student == null)
             {
                 return NotFound();
             }
 
-            var student = await _context.Student
-                .FirstOrDefaultAsync(m => m.StudentID == id);
-            if (student == null)
+            var nTD195Student = await _context.NTD195Student
+                .FirstOrDefaultAsync(m => m.NTD195StudentID == id);
+            if (nTD195Student == null)
             {
                 return NotFound();
             }
 
-            return View(student);
+            return View(nTD195Student);
         }
 
         // GET: Student/Create
@@ -55,31 +55,31 @@ namespace NTD_Baithi2324.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentID,FullName,MaLOP")] Student student)
+        public async Task<IActionResult> Create([Bind("NTD195StudentID,NTD195FullName,NTD195MaLOP")] NTD195Student nTD195Student)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(student);
+                _context.Add(nTD195Student);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(student);
+            return View(nTD195Student);
         }
 
         // GET: Student/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Student == null)
+            if (id == null || _context.NTD195Student == null)
             {
                 return NotFound();
             }
 
-            var student = await _context.Student.FindAsync(id);
-            if (student == null)
+            var nTD195Student = await _context.NTD195Student.FindAsync(id);
+            if (nTD195Student == null)
             {
                 return NotFound();
             }
-            return View(student);
+            return View(nTD195Student);
         }
 
         // POST: Student/Edit/5
@@ -87,9 +87,9 @@ namespace NTD_Baithi2324.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("StudentID,FullName,MaLOP")] Student student)
+        public async Task<IActionResult> Edit(string id, [Bind("NTD195StudentID,NTD195FullName,NTD195MaLOP")] NTD195Student nTD195Student)
         {
-            if (id != student.StudentID)
+            if (id != nTD195Student.NTD195StudentID)
             {
                 return NotFound();
             }
@@ -98,12 +98,12 @@ namespace NTD_Baithi2324.Controllers
             {
                 try
                 {
-                    _context.Update(student);
+                    _context.Update(nTD195Student);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!StudentExists(student.StudentID))
+                    if (!NTD195StudentExists(nTD195Student.NTD195StudentID))
                     {
                         return NotFound();
                     }
@@ -114,25 +114,25 @@ namespace NTD_Baithi2324.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(student);
+            return View(nTD195Student);
         }
 
         // GET: Student/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.Student == null)
+            if (id == null || _context.NTD195Student == null)
             {
                 return NotFound();
             }
 
-            var student = await _context.Student
-                .FirstOrDefaultAsync(m => m.StudentID == id);
-            if (student == null)
+            var nTD195Student = await _context.NTD195Student
+                .FirstOrDefaultAsync(m => m.NTD195StudentID == id);
+            if (nTD195Student == null)
             {
                 return NotFound();
             }
 
-            return View(student);
+            return View(nTD195Student);
         }
 
         // POST: Student/Delete/5
@@ -140,23 +140,23 @@ namespace NTD_Baithi2324.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Student == null)
+            if (_context.NTD195Student == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Student'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.NTD195Student'  is null.");
             }
-            var student = await _context.Student.FindAsync(id);
-            if (student != null)
+            var nTD195Student = await _context.NTD195Student.FindAsync(id);
+            if (nTD195Student != null)
             {
-                _context.Student.Remove(student);
+                _context.NTD195Student.Remove(nTD195Student);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool StudentExists(string id)
+        private bool NTD195StudentExists(string id)
         {
-          return (_context.Student?.Any(e => e.StudentID == id)).GetValueOrDefault();
+          return (_context.NTD195Student?.Any(e => e.NTD195StudentID == id)).GetValueOrDefault();
         }
     }
 }

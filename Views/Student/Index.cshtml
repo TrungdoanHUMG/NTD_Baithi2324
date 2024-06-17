@@ -1,4 +1,4 @@
-@model IEnumerable<NTD_Baithi2324.Models.Student>
+@model IEnumerable<NTD_Baithi2324.Models.NTD195Student>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FullName)
+                @Html.DisplayNameFor(model => model.NTD195FullName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MaLOP)
+                @Html.DisplayNameFor(model => model.NTD195MaLOP)
             </th>
             <th></th>
         </tr>
@@ -25,15 +25,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FullName)
+                @Html.DisplayFor(modelItem => item.NTD195FullName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MaLOP)
+                @Html.DisplayFor(modelItem => item.NTD195MaLOP)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.StudentID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.StudentID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.StudentID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.NTD195StudentID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NTD195StudentID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NTD195StudentID">Delete</a>
             </td>
         </tr>
 }
