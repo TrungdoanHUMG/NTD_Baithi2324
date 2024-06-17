@@ -17,20 +17,38 @@ namespace NTDBaithi2324.Migrations
 
             modelBuilder.Entity("NTD_Baithi2324.Models.Person", b =>
                 {
-                    b.Property<string>("PersonID")
+                    b.Property<string>("NTD195PersonID")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Diachi")
+                    b.Property<string>("NTD195Diachi")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NTD195FullName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("NTD195PersonID");
+
+                    b.ToTable("Person");
+                });
+
+            modelBuilder.Entity("NTD_Baithi2324.Models.Student", b =>
+                {
+                    b.Property<string>("StudentID")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("PersonID");
+                    b.Property<string>("MaLOP")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.ToTable("Person");
+                    b.HasKey("StudentID");
+
+                    b.ToTable("Student");
                 });
 #pragma warning restore 612, 618
         }

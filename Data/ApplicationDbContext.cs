@@ -13,4 +13,6 @@ using NTD_Baithi2324.Models;
         }
 
         public DbSet<NTD_Baithi2324.Models.Person> Person { get; set; } = default!;
+
+        public DbSet<NTD_Baithi2324.Models.Student> Student { get; set; } = default!;
     }

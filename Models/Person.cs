@@ -7,8 +7,8 @@ namespace NTD_Baithi2324.Models
     public class Person
     {
         [Key]
-        public string PersonID { get; set; }
-        public string FullName { get; set; }
-        public string Diachi { get; set; }
+        public string NTD195PersonID { get; set; }
+        public string NTD195FullName { get; set; }
+        public string NTD195Diachi { get; set; }
     }
 }
