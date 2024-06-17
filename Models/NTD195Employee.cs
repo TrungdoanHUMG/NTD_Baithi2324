@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace NTD_Baithi2324.Models
 {
     [Table("Employee")]
-    public class Empoyee
+    public class NTD195Empoyee : NTD195Person
     {
         [Key]
         public string NTD195EmpoyeeID { get; set; }
