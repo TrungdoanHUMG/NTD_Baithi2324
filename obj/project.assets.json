@@ -10820,7 +10820,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Trung Doan\\.nuget\\packages\\": {}
+    "C:\\Users\\ngtru\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -10828,11 +10828,11 @@
       "projectUniqueName": "D:\\NTD_Baithi2324\\NTD_Baithi2324.csproj",
       "projectName": "NTD_Baithi2324",
       "projectPath": "D:\\NTD_Baithi2324\\NTD_Baithi2324.csproj",
-      "packagesPath": "C:\\Users\\Trung Doan\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\ngtru\\.nuget\\packages\\",
       "outputPath": "D:\\NTD_Baithi2324\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Trung Doan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ngtru\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -10850,6 +10850,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10892,6 +10897,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10900,7 +10923,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
